@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    list-style: none;
+    font-family: sans-serif;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container::before {
+    content: '';
+    position: absolute;
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    background: linear-gradient(#f12121, #6ff33b);
+    transform: translate(-490px, -150px);
+}
+.container::after {
+    content: '';
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: linear-gradient(#4eee0f, #f9ed11);
+    transform: translate(490px, 150px);
+}
+.container .ball-1 {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #85f50e;
+    transform: translate(-250px,200px);
+    position: absolute;
+}
+.container .ball-2 {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #08e2ff;
+    transform: translate(-10px,-220px);
+    position: absolute;
+}
+.container .ball-3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #f81717;
+    transform: translate(150px,250px);
+    position: absolute;
+}
+.container .box {
+    height: 86vh;
+    width: 75%;
+    padding: 0, 20px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 10;
+    
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    box-shadow: -15px 17px 17px rgba(10,10,10, 0.25);
+}
+
+.container .box h1 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 40px;
+    align-items: center;
+    place-content: center;
+}
+.container .box h3 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 40px;
+    align-items: center;
+    place-content: center;
+    text-indent: 40px;
+}
+.container .box h4 {
+    padding-top: 30px;
+    padding-left: 700px;
+    padding-right: 40px;
+    align-items: center;
+    place-content: center;
+    text-indent: 40px;
+}

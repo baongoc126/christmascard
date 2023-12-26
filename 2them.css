@@ -1,0 +1,2213 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* {
+    animation: animate__fadeIn ;
+}
+
+:root {
+  --dark-color: #000;
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--dark-color);
+  overflow: hidden;
+  perspective: 1000px;
+}
+.background {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    filter: blur(0.1vmin);
+    background-image: radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)), repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px), repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px), linear-gradient(90deg, #00fffa, #f0f0f0);
+  }
+  .tree {
+    position: absolute;
+    bottom: 10vmin;
+    transform-origin: top center;
+    z-index: 10;
+    --fl-speed: 0.8s;
+  }
+ .root {
+    position: relative;
+    width: 90px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+    background-image: radial-gradient(#521515, transparent);
+    z-index: -1;
+ }
+ .star {
+    position: absolute;
+    top:-420px ;
+    left: 50% ;
+    transform: translateX(-35%);
+    
+    width: 70px;
+    height: 70px;
+    background-color: #f7e30d;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: rgba(81, 20, 236, 0.56) 22px 22px 70px 100px;
+ }
+ .buldl1, .bulbl2, .bulbl3, .bulbl4, .bulbl5, .bulbl6, .bulbl7, .bulbl8, .bulbl9, .bulbl10, .bulbl11, .bulbl12 {
+    z-index: 20 ;
+ }
+ .lop--1, .lop--2, .lop--3, .lop--4 {
+   
+    place-items: center;
+ }
+ .lop--1 {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    bottom: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+ }
+ .lop--2 {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    bottom: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4 ;
+ }
+ .lop--3 {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 380px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+ }
+ .lop--4 {
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    top: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+ }
+  .nhat-tang-1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    z-index: -1;
+  }
+  .bulb1 {
+         content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         display: grip;
+         border-radius: 50% 4px;
+         background: #f6e424;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #f6e424, -1px -1px 15px #f6e424 ;
+    animation: buld1 0.8s linear 0s infinite alternate;
+  }
+  .bulb2 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 30px;
+         left: 40px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #ef1616;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #f62424, -1px -1px 15px #f62e24 ;
+    animation: buld2 0.8s linear 0s infinite alternate;
+  }
+  .bulb3 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 10px;
+         right: 50px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #16ef7f;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #16ef7f, -1px -1px 15px #16ef7f ;
+    animation: buld3 0.8s linear 0s infinite alternate;
+  }
+  .bulb4 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 40px;
+         left: -20px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #7258f3;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #7258f3, -1px -1px 15px #7258f3 ;
+    animation: buld4 0.8s linear 0s infinite alternate;
+  }
+  .bulb5 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 50px;
+         left: 60px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #559ff3;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #559ff3, -1px -1px 15px #559ff3 ;
+    animation: buld5 0.8s linear 0s infinite alternate;
+  }
+  .bulb6 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 60px;
+         left: 80px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #f8a409;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #f8a409, -1px -1px 15px #f8a409 ;
+    animation: buld6 0.8s linear 0s infinite alternate;
+  }
+  .bulb7 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 70px;
+         left: 60px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #f10808;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #f10808, -1px -1px 15px #f10808 ;
+    animation: buld7 0.8s linear 0s infinite alternate;
+  }
+  .bulb8 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 50px;
+         left: -40px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #b0efd2;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #b0efd2, -1px -1px 15px #b0efd2 ;
+    animation: buld8 0.8s linear 0s infinite alternate;
+  }
+  .bulb9 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 50px;
+         left: -60px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #f714a4;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #f714a4, -1px -1px 15px #f714a4 ;
+    animation: buld9 0.8s linear 0s infinite alternate;
+  }
+  .bulb10 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 40px;
+         left: -10px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #65eaf9;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #65eaf9, -1px -1px 15px #65eaf9 ;
+    animation: buld10 0.8s linear 0s infinite alternate;
+  }
+  .bulb11 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 55px;
+         left:-25px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #3708f1;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #3708f1, -1px -1px 15px #3708f1 ;
+    animation: buld11 0.8s linear 0s infinite alternate;
+  }
+  .bulb12 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 20px;
+         left: -35px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #96ff16;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #96ff16, -1px -1px 15px #96ff16 ;
+    animation: buld12 0.8s linear 0s infinite alternate;
+  }
+  .bulb13 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 45px;
+         left: -70px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #b917f9;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #b917f9, -1px -1px 15px #b917f9 ;
+    animation: buld13 0.8s linear 0s infinite alternate;
+  }
+  .bulb14 {
+    content: '';
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         top: 70px;
+         left: 10px;
+         display: grip;
+         border-radius: 50% 4px;
+    background: #7e05ff;
+    opacity: 1;
+    box-shadow: 1px 1px 15px #7e05ff, -1px -1px 15px #7e05ff ;
+    animation: buld14 0.8s linear 0s infinite alternate;
+  }
+  @keyframes buld1 {
+    from {box-shadow: 1px 1px 15px #f6e424, -1px -1px 15px #f6e424 ;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld2 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #f62424, -1px -1px 15px #f62e24 ;
+    opacity: 1;}
+  }
+  @keyframes buld3 {
+    from {box-shadow: 1px 1px 15px #16ef7f, -1px -1px 15px #16ef7f ;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld4 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #7258f3, -1px -1px 15px #7258f3 ;
+    opacity: 1;}
+  }
+  @keyframes buld5 {
+    from {box-shadow: 1px 1px 15px #559ff3, -1px -1px 15px #559ff3 ;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld6 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #f8a409, -1px -1px 15px #f8a409 ;
+    opacity: 1;}
+  }
+  @keyframes buld7 {
+    from {box-shadow: 1px 1px 15px #f10808, -1px -1px 15px #f10808 ;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld8 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #b0efd2, -1px -1px 15px #b0efd2 ;
+    opacity: 1;}}
+  @keyframes buld9 {
+    from {box-shadow: 1px 1px 15px #f714a4, -1px -1px 15px #f714a4 ;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld10 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #65eaf9, -1px -1px 15px #65eaf9 ;
+    opacity: 1;}}
+  @keyframes buld11 {
+    from {box-shadow: 1px 1px 15px #3708f1, -1px -1px 15px #3708f1;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld12 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #96ff16, -1px -1px 15px #96ff16 ;
+    opacity: 1;}}
+      @keyframes buld13 {
+    from {box-shadow: 1px 1px 15px #b917f9, -1px -1px 15px #b917f9 ;opacity: 1; }
+    to {box-shadow: none; opacity: .3;}
+  }
+  @keyframes buld14 {
+    from {box-shadow: none; opacity: .3 }
+    to {box-shadow: 1px 1px 15px #7e05ff, -1px -1px 15px #7e05ff ;
+    opacity: 1;}}
+  .nhat-tang-1 .leaf-1{
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top:  0px;
+    background-image: radial-gradient( #588e7d, transparent);
+    
+    transform: rotate(0deg);
+}
+.nhat-tang-1 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top:  10px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(30deg);
+}
+.nhat-tang-1 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top:  10px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-30deg);
+}
+.nhat-tang-1 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top:  30px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);  transform: rotate(45deg);
+}
+.nhat-tang-1 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top:  30px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);   transform: rotate(-45deg);
+}
+.nhat-tang-1 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top:  5px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);   transform: rotate(40deg);
+}
+.nhat-tang-1 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 5px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);   transform: rotate(-40deg);
+}
+.nhat-tang-1 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -10px;
+    background-image: radial-gradient( #588e7d, transparent);   transform: rotate(20deg);
+}
+.nhat-tang-1 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent);    transform: rotate(-20deg);
+}
+.nhat-tang-1 .leaf-10 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent); transform: rotate(45deg);
+}
+.nhat-tang-1 .leaf-11 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 70px;
+   
+    background-image: radial-gradient( #588e7d, transparent);    transform: rotate(-45deg);
+}
+.nhat-tang-1 .leaf-12 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);   transform: rotate(25deg);
+}
+.nhat-tang-1 .leaf-13 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 40px;
+   
+    background-image: radial-gradient( #588e7d, transparent);    transform: rotate(-25deg);
+}
+.nhat-tang-1 .leaf-1, .nhat-tang-1 .leaf-2, .nhat-tang-1 .leaf-3, .nhat-tang-1 .leaf-4, .nhat-tang-1 .leaf-5, .nhat-tang-1 .leaf-6, .nhat-tang-1 .leaf-7, 
+.nhat-tang-1 .leaf-8, .nhat-tang-1 .leaf-9 , .nhat-tang-1 .leaf-10 , .nhat-tang-1 .leaf-11, .nhat-tang-1 .leaf-12 , .nhat-tang-1 .leaf-13 {
+   
+}
+
+
+
+.nhat-tang-2 {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+}
+.nhat-tang-2 .leaf2-1 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent); transform: rotate(0deg);
+}
+.nhat-tang-2 .leaf2-2 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-2 .leaf2-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-2 .leaf2-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(35deg);
+}
+.nhat-tang-2 .leaf2-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+
+.nhat-tang-2 .leaf2-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -80px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(40deg);
+}.nhat-tang-2 .leaf2-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: 80px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-40deg);
+}
+.nhat-tang-2 .leaf2-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-2 .leaf2-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-2 .leaf2-10 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 90px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-2 .leaf2-11 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -90px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-2 .leaf2-12 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-2 .leaf2-13 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 0px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(0deg);
+}
+.nhat-tang-2 .leaf2-14 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -130px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-2 .leaf2-15 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 130px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-2 .leaf2-16 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 140px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-2 .leaf2-17 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -140px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-2 .leaf2-18 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 60px;
+    left: -120px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-2 .leaf2-19 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 60px;
+    left: 120px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-2 .leaf2-20 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-2 .leaf2-21 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-2 .leaf2-22 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 70px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-45deg);
+}
+.nhat-tang-2 .leaf2-23 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-2 .leaf2-24 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-2 .leaf2-25 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -100px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-2 .leaf2-26 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 100px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-35deg);
+}
+.nhat-tang-2 .leaf2-27 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -10px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(0deg);
+}
+.nhat-tang-2 .leaf2-28 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-0deg);
+}
+
+.nhat-tang-3 {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+}
+.nhat-tang-3 .leaf3-1 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 30px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(0deg);
+}
+.nhat-tang-3 .leaf3-2 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-3 .leaf3-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-3 .leaf3-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-3 .leaf3-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+
+.nhat-tang-3 .leaf3-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -80px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(40deg);
+}
+.nhat-tang-3 .leaf3-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: 80px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-40deg);
+}
+.nhat-tang-3 .leaf3-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-3 .leaf3-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-3 .leaf3-10 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 90px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-3 .leaf3-11 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -90px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(45deg);
+}
+.nhat-tang-3 .leaf3-12 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 70px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-45deg);
+}
+.nhat-tang-3 .leaf3-13 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 0px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(0deg);
+}
+.nhat-tang-3 .leaf3-14 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -130px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-3 .leaf3-15 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 130px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(-45deg);
+}
+.nhat-tang-3 .leaf3-16 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 140px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-55deg);
+}
+.nhat-tang-3 .leaf3-17 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -140px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-3 .leaf3-18 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 60px;
+    left: -140px; 
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(55deg);
+}
+.nhat-tang-3 .leaf3-19 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 60px;
+    left: 140px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-55deg);
+}
+.nhat-tang-3 .leaf3-20 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-3 .leaf3-21 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-3 .leaf3-22 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 70px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-45deg);
+}
+.nhat-tang-3 .leaf3-23 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-3 .leaf3-24 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-3 .leaf3-25 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -100px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(35deg);
+}
+.nhat-tang-3 .leaf3-26 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 100px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-3 .leaf3-27 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -10px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(0deg);
+}
+.nhat-tang-3 .leaf3-28 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(-0deg);
+}
+.nhat-tang-3 .leaf3-29 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: 180px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-3 .leaf3-30 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: -180px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-3 .leaf3-31 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -160px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-3 .leaf3-32 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 160px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-3 .leaf3-33 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -130px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-3 .leaf3-34 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 130px; background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-55deg);
+}
+.nhat-tang-4{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+}
+.nhat-tang-4 .leaf4-1 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(0deg);
+}
+.nhat-tang-4 .leaf4-2 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(35deg);
+}
+.nhat-tang-4 .leaf4-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-4 .leaf4-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(35deg);
+}
+.nhat-tang-4 .leaf4-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+
+.nhat-tang-4 .leaf4-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -80px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(40deg);
+}
+.nhat-tang-4 .leaf4-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: 80px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-40deg);
+}
+.nhat-tang-4 .leaf4-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 50px;
+    left: -40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-4 .leaf4-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 40px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-4 .leaf4-10 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 90px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(-45deg);
+}
+.nhat-tang-4 .leaf4-11 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -90px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(45deg);
+}
+.nhat-tang-4 .leaf4-12 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-4 .leaf4-13 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 0px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(0deg);
+}
+.nhat-tang-4 .leaf4-14 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -130px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(45deg);
+}
+.nhat-tang-4 .leaf4-15 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: 130px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-45deg);
+}
+.nhat-tang-4 .leaf4-16 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 140px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-4 .leaf4-17 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -140px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(55deg);
+}
+.nhat-tang-4 .leaf4-18 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 80px;
+    left: -120px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(55deg);
+}
+.nhat-tang-4 .leaf4-19 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 80px;
+    left: 120px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(-55deg);
+}
+.nhat-tang-4 .leaf4-20 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 40px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-4 .leaf4-21 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 80px;
+    left: -70px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(45deg);
+}
+.nhat-tang-4 .leaf4-22 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 80px;
+    left: 70px;
+    background-image: radial-gradient( #588e7d, transparent);
+}
+.nhat-tang-4 .leaf4-23 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -20px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(35deg);
+}
+.nhat-tang-4 .leaf4-24 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 20px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-4 .leaf4-25 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 80px;
+    left: -100px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(35deg);
+}
+.nhat-tang-4 .leaf4-26 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 80px;
+    left: 100px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(-35deg);
+}
+.nhat-tang-4 .leaf4-27 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -10px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(0deg);
+}
+.nhat-tang-4 .leaf4-28 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 10px;
+    background-image: radial-gradient( #588e7d, transparent);  
+    transform: rotate(-0deg);
+}
+.nhat-tang-4 .leaf4-31 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -200px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(55deg);
+}
+.nhat-tang-4 .leaf4-32 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 200px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-4 .leaf4-33 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -180px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(55deg);
+}
+.nhat-tang-4 .leaf4-34 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 180px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-55deg);
+}
+.nhat-tang-4 .leaf4-35 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: 220px;
+    background-image: radial-gradient( #588e7d, transparent);
+    transform: rotate(-35deg);
+}
+.nhat-tang-4 .leaf4-36 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 70px;
+    left: -220px;
+    background-image: radial-gradient( #588e7d, transparent); 
+    transform: rotate(35deg);
+}
+.trung-tang-1 {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    top: 60px;
+    left: 50%;
+    
+}
+.trung-tang-1 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(10deg);
+    
+}
+.trung-tang-1 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    top: 100;
+    left: -20px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(30deg);
+}
+.trung-tang-1 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    top: 100;
+    left: 20px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-30deg);
+}
+.trung-tang-1 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    top: 160;
+    left: -50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(35deg);
+}
+.trung-tang-1 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    top: 130;
+    left: 50px; background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-1 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    top: 130;
+    left: 50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-1 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    top: 130;
+    left: -50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-2 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 40px;
+    left: 10px;
+}
+.trung-tang-2 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    left: 250px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(10deg);
+}
+.trung-tang-2 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 100;
+    left: 230px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(30deg);
+}
+.trung-tang-2 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 100;
+    left: 270px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-30deg);
+}
+.trung-tang-2 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: 200px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(35deg);
+}
+.trung-tang-2 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 300px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-2 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 160px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-2 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 340px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-2 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 140px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-2 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 360px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-3 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    bottom: 10px;
+    left: 230px;
+
+}
+.trung-tang-3 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 110px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(10deg);
+} 
+.trung-tang-3 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 110px;
+    left: 10px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(10deg);
+}
+.trung-tang-3 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 100;
+    left: -10px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(30deg);
+}
+.trung-tang-3 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 100;
+    left: 30px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-3 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: -30px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(35deg);
+}
+.trung-tang-3 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 120px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-3 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -120px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-3 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 165px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-3 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -165px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-3 .leaf-10 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 190px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-3 .leaf-11 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -190px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+    display: none;
+}
+.trung-tang-3 .leaf-12 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(25deg);
+}
+.trung-tang-3 .leaf-13 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-25deg);
+}
+.trung-tang-3 .leaf-14 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: -70px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(35deg);
+}
+.trung-tang-3 .leaf-15 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: 70px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-4 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 50px;
+    left: 230px;
+
+}
+.trung-tang-4 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(10deg);
+}
+.trung-tang-4 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    left: 10px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(10deg);
+}
+.trung-tang-4 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 100;
+    left: -10px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(30deg);
+}
+.trung-tang-4 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 100;
+    left: 30px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-4 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: -30px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(35deg);
+}
+.trung-tang-4 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 120px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.trung-tang-4 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -120px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-4 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 165px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-4 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -165px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-4 .leaf-10 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 190px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-55deg);
+}
+.trung-tang-4 .leaf-11 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -190px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(55deg);
+}
+.trung-tang-4 .leaf-12 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: -50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(25deg);
+}
+.trung-tang-4 .leaf-13 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 130;
+    left: 50px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-25deg);
+}
+.trung-tang-4 .leaf-14 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: -70px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(35deg);
+}
+.trung-tang-4 .leaf-15 {
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    top: 160;
+    left: 70px;
+    background-image: radial-gradient( #2c7459, transparent);
+    transform: rotate(-35deg);
+}
+.dam-tang-1 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 80px;
+    left: 50%;
+    
+}
+
+.dam-tang-1 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-1 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-1 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: 20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-1 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -40px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(35deg);
+}
+.dam-tang-2 {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    top: 45px;
+    left: 250px;
+}
+.dam-tang-2 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-2 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+   
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-2 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -40px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-2 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: 40px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-2 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -60px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(35deg);
+}
+.dam-tang-2 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: 60px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-35deg);
+}
+.dam-tang-2 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -90px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-2 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -80px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-2 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: 80px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+.dam-tang-2 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: -20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-2 .leaf-10 {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    left: 20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-3 {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 40px;
+    left: 230px;
+}
+.dam-tang-3 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-3 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 10;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-3 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -55px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-3 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 55px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-3 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -75px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(35deg);
+}
+.dam-tang-3 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 75px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-35deg);
+}
+.dam-tang-3 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -105px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-3 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 105px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+.dam-tang-3 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 150px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+.dam-tang-3 .leaf-10 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-3 .leaf-11 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-3 .leaf-12 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -150px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-3 .leaf-13 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -180px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-3 .leaf-14 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 180px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+.dam-tang-4 {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 50px;
+    left: 230px;
+}
+.dam-tang-4 .leaf-1 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-4 .leaf-2 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(10deg);
+}
+.dam-tang-4 .leaf-3 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -55px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-4 .leaf-4 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 55px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-4 .leaf-5 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -75px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(35deg);
+}
+.dam-tang-4 .leaf-6 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 75px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-35deg);
+}
+.dam-tang-4 .leaf-7 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -105px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-4 .leaf-8 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 105px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+.dam-tang-4 .leaf-9 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 150px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+.dam-tang-4 .leaf-10 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -20px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(30deg);
+}
+.dam-tang-4 .leaf-11 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 50;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-30deg);
+}
+.dam-tang-4 .leaf-12 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -150px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-4 .leaf-13 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: -180px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(55deg);
+}
+.dam-tang-4 .leaf-14 {
+    position: absolute;
+    width: 30px;
+    height: 85px;
+    left: 195px;
+    background-image: radial-gradient( #0b472e, transparent);
+    transform: rotate(-55deg);
+}
+@keyframes showcontent {
+    0%, 100% {
+        transform: scale(0) rotate(75deg) rotateX(10deg) rotateY(-200deg);
+      }
+      50% {
+        transform: scale(0.5) rotate(79deg) rotateX(10deg) rotateY(-200deg);
+      }
+      100% {
+        transform: scale(1) rotate(79deg) rotateX(10deg) rotateY(-200deg);
+      }
+  }
+  
+  #container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: move;
+  }
+  @keyframes move {
+    0% {
+        opacity: 0; 
+        transform: translateY(0);
+    }
+    10% {
+        opacity: 1;
+        
+    }
+    90% {
+        opacity: 1;
+       
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+  }
